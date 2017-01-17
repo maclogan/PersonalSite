@@ -6,8 +6,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    body {
-      font-family: sans-serif;
+
+    .pageTitles h1 {
+      padding: 10px;
+      text-align: center;
+    }
+    .pageTitles button {
+      text-align: center;
     }
     .table-heading {
       text-align: left;
@@ -45,7 +50,12 @@
     </ul>
     </div>
   </nav>
+
   <h1 style="text-align:center; padding:10px;">Matthew Logan's Resume</h1>
+  <div style="text-align:center;">
+    <button class="btn btn-primary"><a href="#" download="LoganMatthew_Resume"><span class="fa fa-download" style="color:white;"></span></a> Download Resume</button>
+  </div>
+
   <div class="container">
     <h3 class="table-heading">Education</h3>
     <table class ="table">
@@ -78,8 +88,8 @@
         <tr>
           <td class="logo"><img src="http://www2.tulane.edu/tsweb/TechConnect/images/TECHNOLOx150_1.png"></td>
           <td class="focus">
-            <b>Tulane University Technology Connection</b><br>
-            Technology Consultant assisting in computer hardware and software repair as well as computer, tablets, and accessory sales
+            <b>Tulane University Technology Connection</b> - Technology Consultant<br>
+            Assist in computer hardware and software repair as well as computer, tablets, and accessory sales
           </td>
           <td class="date">
             Apr 2015 - Present<br>
@@ -90,8 +100,8 @@
         <tr>
           <td class="logo"><img src = "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Tongji_Uni_logo.svg/200px-Tongji_Uni_logo.svg.png"></td>
           <td class="focus">
-            <b>Tongji University UXD Research Lab</b><br>
-            Text
+            <b>Tongji University UXD Research Lab</b> - UXD Intern<br>
+            Programmer in charge of developping prototypes and participating in case studies to develop innovative interfaces and controls based on client's needs.
           </td>
           <td class="date">
             Aug 2015 - Dec 2015 <br>
@@ -104,8 +114,9 @@
         <tr>
           <td class="logo"><img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png"></td>
           <td class="focus">
-            <b>Virtual Pen-Pal</b><br>
-            Text
+            <b>Virtual Pen-Pal</b> (WIP)<br>
+            Using Natural Language Processing, GitHub user GuntherCox's Chatterbot source code, and Django with Python, I aim to develop a site that assists users in their language learning
+            by providing a machine learning chatbot.  This will allow user's to hold natural conversations in both their native langauge and a learned, foreign language.
           </td>
           <td class="date"><a href="https://github.com/maclogan/VirtualPenPal">Learn More ></a><td>
         </tr>
@@ -113,7 +124,8 @@
           <td class="logo"><img src = "http://classschedule.tulane.edu/images/tu.png"></td>
           <td class="focus">
             <b>Tulane Online Transportation System</b><br>
-            Text
+            In an AGILE, testing based environment, 2 students and I created a website with Ruby on Rails that allowed users to request Tulane shuttles.  Shuttle
+            managers were then able to accept or deny requests and student's would recieve notifications on the decision.
           </td>
           <td class="date"><a href ="https://github.com/wrichey/TulaneOnlineTransportationSystem">Learn More ></a><td>
         </tr>
@@ -121,7 +133,9 @@
           <td class="logo"><img src = "http://www.kollmar.com/images/Auto-Icon-e1358838892537.png"></td>
           <td class="focus">
             <b>Human Machine Interface for Automobiles</b><br>
-            Text
+            Hired by a Chinese automotive company, a group of User Experience and Design students and I were tasked to develop a new human machine interface to be used
+            in cars (similar to Tesla's interface).  We conducted user studies to determine the most appropriate, least distracting interactions and I programmed the
+            prototype using Android Studio and Java.
           </td>
           <td class="date"><td>
         </tr>
@@ -129,7 +143,8 @@
           <td class="logo"><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/CTSkullImage.png/250px-CTSkullImage.png"></td>
           <td class="focus">
             <b>Volume Rendering Visualization Project</b><br>
-            Text
+            Using CMake, developed a model to view a CAT scan of a human skull.  The model could be rotated, spliced, and zoomed.  A color curve was created that allowed
+            for isolation of the different components of the model, i.e. the skull, the brain, or the skin.
           </td>
           <td class="date"><td>
         </tr>
@@ -138,11 +153,29 @@
     <table class="table">
       <tbody>
         <tr>
-        <th>Languages</th>
-        <td>
-          Languages
-        </td>
-      </tr>
+          <th>Languages</th>
+          <td>
+            Java, Python, C, C++, HTML, CSS, JavaScript, Ruby, SQL, Bash, Batch
+          </td>
+        </tr>
+        <tr>
+          <th>Frameworks</th>
+          <td>
+            AngularJS, NodeJS, Rails, Django, JavaFX
+          </td>
+        </tr>
+        <tr>
+          <th>Development Tools</th>
+          <td>
+            Git, XCode, Android Studio, Eclipse, Bracket, JetBrains, Atom, VIM, Terminal
+          </td>
+        </tr>
+        <tr>
+          <th>Environments</th>
+          <td>
+            Windows, Mac OS, iOS, Android, Ubuntu, Debian, OpenSuse, Arch
+          </td>
+        </tr>
       </tbody>
     </table>
     <h3 class="table-heading">Certifications</h3>
@@ -151,24 +184,35 @@
           <td class="logo"><img src="http://catalog.ledet.com/mime/media/5/305/Mac_Advantage_Mac_Repair_ACMT.png"></td>
           <td class="focus">
             <b>Apple Certified Macintosh Technician (ACMT)</b><br>
-            Text
+            Verifies the ability to perform troubleshooting and repair on both desktop and portable Macintrosh systems.
           </td>
           <td class="date">
-            <a href="http://www2.tulane.edu/universityservices/tech-products/index.cfm">Learn More ></a>
+            <a href="http://training.apple.com/certification/acmt">Learn More ></a>
           <td>
         </tr>
         <tr>
           <td class="logo"><img src = "http://www.graphic-strategies.com/APP_files/APP%20seal.png"></td>
           <td class="focus">
             <b>Apple Product Professional (APP)</b><br>
-            Text
+            Verifies extensive experience with Apple hardware and software.
           </td>
           <td class="date">
-            <a href="#">Learn More ></a>
           <td>
         </tr>
     </table>
     <h3 class="table-heading">Selected Courses</h3>
+    <table class="table">
+      <tr>
+        <td>CMPS:2170 Discrete Math</td>
+        <td>CMPS:2200 Algorithms</td>
+        <td>CMPS:3260 Algorithms and Complexity</td>
+      </tr>
+      <tr>
+        <td>CMPS:2300 Computer Systems and Networking</td>
+        <td>CMPS:3120 Visualization</td>
+        <td>CMPS:3300 Software Studio</td>
+      </tr>
+    </table>
   </div>
 </body>
 </html>
