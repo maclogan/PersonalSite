@@ -27,7 +27,7 @@
           <li><a href="https://www.instagram.com/motherfingpandas/?hl=en">Instagram</a></li>
         </ul>
       </div>
-      <div class="mobile-header" v-show='windowWidth<=900'>
+      <div class="mobile-header" v-show='windowWidth<=1024'>
         <div class="mobile-header_contact">
             <div class="mobile-header_name">Matthew Logan</div>
             <div class='mobile-header_contact-info'>        
@@ -46,8 +46,8 @@
           <a href="/res/LoganMatthew_Resume.pdf"><div id="download-button" class="main_topbar_download-button"></div></a> 
         </div>
         <ul id="content" class="main_content">
-          <div class="main_content_category" v-show='windowWidth<=900'>Work Experience</div>
-          <li v-if='blnWork | windowWidth<=900' v-for="item in workItems">
+          <div class="main_content_category" v-show='windowWidth<=1024'>Work Experience</div>
+          <li v-if='blnWork | windowWidth<=1024' v-for="item in workItems">
             <img class="main_content_icon" v-bind:src='item.icon'>
             <div class="main_content_text">
               <div class="main_content_text_title">{{ item.title }}</div>
@@ -55,8 +55,8 @@
               <div class="main_content_text_description">{{ item.description }}</div>
               </div>
           </li>
-          <div class="main_content_category" v-show='windowWidth<=900'>Education</div>
-          <li v-if='blnEdu | windowWidth<=900' v-for="item in eduItems">
+          <div class="main_content_category" v-show='windowWidth<=1024'>Education</div>
+          <li v-if='blnEdu | windowWidth<=1024' v-for="item in eduItems">
             <img class="main_content_icon" v-bind:src='item.icon'>
             <div class="main_content_text">
               <div class="main_content_text_title">{{ item.title }}</div>
@@ -64,8 +64,8 @@
               <div class="main_content_text_description">{{ item.description }}</div>
               </div>
           </li>
-          <div class="main_content_category" v-show='windowWidth<=900'>Projects</div>
-          <li v-if='blnProj | windowWidth<=900' v-for="item in projItems">
+          <div class="main_content_category" v-show='windowWidth<=1024'>Projects</div>
+          <li v-if='blnProj | windowWidth<=1024' v-for="item in projItems">
             <img class="main_content_icon" v-bind:src='item.icon'>
             <div class="main_content_text">
               <div class="main_content_text_title">{{ item.title }}</div>
