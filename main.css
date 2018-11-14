@@ -47,7 +47,7 @@ li a {
           justify-content: space-between;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
