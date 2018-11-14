@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="/main.css" rel="stylesheet">
+    <title>Mac Logan</title>
+</head>
+<body>
+    <div id="app" class="container">
+      <div id="sidebar" class="sidebar">
+        <div id="header" class="sidebar_header">
+          <div id="name" class="sidebar_header_name">Matthew Logan</div>
+          <div id="info" class="sidebar_header_info">
+            <div>mac.logan.ct@gmail.com</div>
+            <div>(203) 727-3650</div>
+          </div>
+        </div>
+        <ul id="categories" class="sidebar_categories">
+          <li @click='blnWork=true; blnEdu=false; blnProj=false;' v-bind:class="{ sidebar_categories_active: blnWork }">Work</li>
+          <li @click='blnWork=false; blnEdu=true; blnProj=false;' v-bind:class="{ sidebar_categories_active: blnEdu }">Education</li>
+          <li @click='blnWork=false; blnEdu=false; blnProj=true;' v-bind:class="{ sidebar_categories_active: blnProj }">Projects</li>
+        </ul>
+        <ul id="media_links" class="sidebar_media-links">
+          <li><a href="https://github.com/maclogan">Github</a></li>
+          <li><a href="https://codepen.io/maclogan/#">CodePen</a></li>
+          <li><a href="https://www.instagram.com/motherfingpandas/?hl=en">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="mobile-header" v-show='windowWidth<=900'>
+        <div class="mobile-header_contact">
+            <div class="mobile-header_name">Matthew Logan</div>
+            <div class='mobile-header_contact-info'>        
+              <div>mac.logan.ct@gmail.com</div>
+            </div>
+        </div>
+
+        <ul id="media_links" class="mobile-header_media-links">
+            <li><a href="https://github.com/maclogan">Github</a></li>
+            <li><a href="https://codepen.io/maclogan/#">CodePen</a></li>
+            <li><a href="https://www.instagram.com/motherfingpandas/?hl=en">Instagram</a></li>
+          </ul>
+      </div>
+      <div id="main" class="main">
+        <div class="main_topbar">
+          <a href="/res/LoganMatthew_Resume.pdf"><div id="download-button" class="main_topbar_download-button"></div></a> 
+        </div>
+        <ul id="content" class="main_content">
+          <div class="main_content_category" v-show='windowWidth<=900'>Work Experience</div>
+          <li v-if='blnWork | windowWidth<=900' v-for="item in workItems">
+            <img class="main_content_icon" v-bind:src='item.icon'>
+            <div class="main_content_text">
+              <div class="main_content_text_title">{{ item.title }}</div>
+              <div class="main_content_text_location">{{ item.location }}</div>
+              <div class="main_content_text_description">{{ item.description }}</div>
+              </div>
+          </li>
+          <div class="main_content_category" v-show='windowWidth<=900'>Education</div>
+          <li v-if='blnEdu | windowWidth<=900' v-for="item in eduItems">
+            <img class="main_content_icon" v-bind:src='item.icon'>
+            <div class="main_content_text">
+              <div class="main_content_text_title">{{ item.title }}</div>
+              <div class="main_content_text_location">{{ item.location }}</div>
+              <div class="main_content_text_description">{{ item.description }}</div>
+              </div>
+          </li>
+          <div class="main_content_category" v-show='windowWidth<=900'>Projects</div>
+          <li v-if='blnProj | windowWidth<=900' v-for="item in projItems">
+            <img class="main_content_icon" v-bind:src='item.icon'>
+            <div class="main_content_text">
+              <div class="main_content_text_title">{{ item.title }}</div>
+              <div class="main_content_text_description">{{ item.description }}</div>
+              </div>
+          </li>
+        </ul>
+        <a href="/res/LoganMatthew_Resume.pdf"><div class="main_FAB"><i class="fas fa-file-download"></i></div></a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          windowWidth: 0,
+          blnWork: true,
+          blnEdu: false,
+          blnProj: false,
+          workItems: [
+            {
+              'title': 'Implementation Consultant',
+              'icon': '/res/fast.png',
+              'location': 'Fast Enterprises',
+              'description': 'Worked with Oklahoma Tax Commission to develop and support their OneLink and Oklahoma Taxpayer Access Point software. Consulted with Oklahoma Tax Commision to declare possible enhancements and future updates. \nDeveloped using an extensive proprietary code-base using vb.net'
+            },
+            {
+              'title': 'Technology Consultant',
+              'icon': '/res/tulane.png',
+              'location': 'Tulane University Technology Connection',
+              'description': 'Conducted computer, tablet, and accessory transactions and educated customers on key features and maintenance of products Performed computer hardware and software repairs with a team of other technicians Maintained an inventory of over 100 products on a monthly basis Promoted to senior student worker and acted as shift leader to oversee store operations on weekends '
+            },
+            {
+              'title': 'UXD Intern',
+              'icon': '/res/tongji.png',
+              'location': 'Tongji University UXD Research Lab',
+              'description': ' Identiﬁed various client needs by prototyping innovative user experience interactions and conducting case studies Operated as the sole programmer on Human Machine Interface for Automobiles Presented prototypes and ﬁndings to clients during major milestones of the project'
+            },
+          ],
+          eduItems: [
+            {
+              'title': 'BA Computer Science | Asian Studies ',
+              'icon': '/res/tulane.png',
+              'location': 'Tulane University - New Orleans, LA',
+              'description': 'Major in computer sciences with a focus on SaaS and full-stack design and major in Asian Studies with a focus on Chinese language and culture.'
+            },
+            {
+              'title': 'Chinese proficiency certificate',
+              'icon': '/res/Donghua.png',
+              'location': 'Donghua University - Shanghai, China',
+              'description': 'CET 4 month study abroad internship program with 15 credit hours of courses per week along with an internship in Shanghai, China.'
+            },
+          ],
+          projItems: [
+            {
+              'title': 'Virtual Pen-Pal',
+              'icon': '/res/github.png',
+              'description': 'Using natural language processing and machine learning, I sought to aid language learners in practicing their target language using an online chatbot. Through mass user training and an open-sourced code (ChatterBot), I provided a ﬂuid learning experience for users by mimicking a conversational chat session with a native speaker.   This web application utilized MongoDB, Django with Python, and various APIs such as Google\'s Natural Language Parser.'
+            },
+            {
+              'title': 'Tulane Online Transportation System',
+              'icon': '/res/tulane.png',
+              'description': 'In an AGILE and testing based environment, I worked as the Scum Master on a group project that would allow students to schedule Tulane shuttles and for shuttle managers to respond to their requests. With Ruby on Rails, we created a full-stack website that fulﬁlled the needs of the Tulane community.'
+            },
+            {
+              'title': 'Human Machine Interface for Automobiles',
+              'icon': '/res/hmi.png',
+              'description': 'With a group of UXD students, I conducted user studies to produce a car interface that would provide a greater ease of use while driving. Using Java on Android and our case study ﬁndings, I programmed a prototype for milestone presentations to the commissioning client (Zhejiang Geely Holding Group Co., Ltd).'
+            },
+            {
+              'title': 'Volume Rendering Visualization Project',
+              'icon': '/res/mri.png',
+              'description': 'Using CMake, developed a model to view a CAT scan of a human skull. The model could be rotated, spliced, and zoomed. A color curve was created that allowed for isolation of the different components of the model, i.e. the skull, the brain, or the skin.'
+            },
+          ]
+        },
+        created() {
+          window.addEventListener('resize', this.handleResize)
+          this.handleResize();
+        },
+        destroyed() {
+          window.removeEventListener('resize', this.handleResize)
+        },
+        methods: {
+          handleResize() {
+            this.windowWidth = window.innerWidth;
+          }
+        },
+      })
+    </script>
+</body>
+</html>
